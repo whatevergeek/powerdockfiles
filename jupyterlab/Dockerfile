@@ -26,5 +26,4 @@ COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 RUN jupyter labextension install @jupyterlab/plotly-extension
 RUN jupyter labextension install jupyterlab_bokeh
-RUN jupyter labextension install @jupyterlab/google-drive
 COPY . /tmp/
