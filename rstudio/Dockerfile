@@ -83,5 +83,7 @@ RUN R -e "install.packages('genderizeR')"
 RUN R -e "devtools::install_github('dgrtwo/gganimate')"
 RUN R -e "install.packages('ggvis')"
 RUN R -e "install.packages('ggmap')"
+RUN R -e "devtools::install_github('rstudio/keras')"
+
 
 CMD ["/init"]
