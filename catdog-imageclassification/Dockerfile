@@ -1,12 +1,8 @@
-﻿FROM python
+﻿FROM tensorflow/tensorflow:1.8.0
 
 ADD app /app
 
 RUN pip install -r /app/requirements.txt
-
-# Install TensorFlow CPU version from central repo
-RUN pip --no-cache-dir install \
-    http://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.0.0-cp27-none-linux_x86_64.whl
 
 # Expose the port
 EXPOSE 80
