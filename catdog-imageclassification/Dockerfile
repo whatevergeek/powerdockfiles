@@ -1,4 +1,4 @@
-﻿FROM python
+﻿FROM conda/miniconda3
 
 ADD app /app
 
