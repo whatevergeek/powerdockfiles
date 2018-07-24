@@ -20,7 +20,7 @@ graph_def = tf.GraphDef()
 labels = []
 
 def initialize():
-    print('Loading model...',end=''),
+    print('Loading model...',end='')
     with tf.gfile.FastGFile(filename, 'rb') as f:
         graph_def.ParseFromString(f.read())
         tf.import_graph_def(graph_def, name='')
