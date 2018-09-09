@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         rsync \
         software-properties-common \
         unzip \
-        libxml2 \
+        libxml2-dev \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
