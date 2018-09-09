@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         rsync \
         software-properties-common \
         unzip \
+        libxml2 \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -72,8 +73,9 @@ RUN R -e "install.packages('tidyverse')" && \
     R -e "install.packages('RSQLite')" && \
     R -e "install.packages('randomForest')" && \
     R -e "install.packages('fivethirtyeight')" && \
-    R -e "install.packages('leaflet')" 
-
+    R -e "install.packages('leaflet')" && \
+    R -e "install.packages('quanteda')" 
+    
 RUN R -e "devtools::install_github('ramnathv/rCharts@dev')"
 RUN R -e "devtools::install_github('ramnathv/rMaps')"
 RUN R -e "devtools::install_github('rstudio/shinygadgets')"
