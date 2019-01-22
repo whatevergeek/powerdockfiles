@@ -1,0 +1,7 @@
+numpy==1.16.0
+pandas==0.23.4
+matplotlib==3.0.2
+bokeh==1.0.4
+plotly==3.5.0
+scikit-learn==0.20.2 
+spyder==3.3.2 
