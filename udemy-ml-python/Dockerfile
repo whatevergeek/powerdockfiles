@@ -1,6 +1,4 @@
-# minimal-notebook image as of 20190109
-FROM jupyter/minimal-notebook:87210526f381
-
-COPY requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt 
-COPY . /tmp/
+FROM continuumio/miniconda3
+RUN conda create -n bostonhousingproject python=3.6
+RUN echo "source activate bostonhousingproject" > ~/.bashrc
+ENV PATH /opt/conda/envs/bostonhousingproject/bin:$PATH
